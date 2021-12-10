@@ -10,24 +10,24 @@ A Data set having 4177 samples was downloaded from UCI online library. In the da
 
  **Dataset Features** 
  
-•	Sex - Male, Female and Infant 
-•	Length ( mm) - Longest shell dimension
-•	Width (mm) - Perpendicular to length 
-•	Stature (mm)- With meat in shell 
-•	Entire weight (grams) - Whole abalone 
-•	Shucked weight (grams) - Weight of meat 
-•	Viscera weight (grams) - Gut weight (subsequent to dying) 
-•	Shell weight (grams) - After being dried 
-•	Rings (number) ±1.5 gives age in years
+1. Sex - Male, Female and Infant 
+2. 	Length ( mm) - Longest shell dimension
+3. 	Width (mm) - Perpendicular to length 
+4. 	Stature (mm)- With meat in shell 
+5. 	Entire weight (grams) - Whole abalone 
+6. 	Shucked weight (grams) - Weight of meat 
+7. 	Viscera weight (grams) - Gut weight (subsequent to dying) 
+8. 	Shell weight (grams) - After being dried 
+9.	Rings (number) ±1.5 gives age in years
 
 **Machine Learning Libraries Used**
 
-Keras (higher level API for deep learning with Tensorflow in backend)
-Tensorflow (deep learning library in backend)
-AutoKeras(Auto Machine Learning library)
-Pandas(for data processing)
-SciKit Learn(for data preparation) 
-Matplotlib(for plotting graphs)
+1. Keras (higher level API for deep learning with Tensorflow in backend)
+2. Tensorflow (deep learning library in backend)
+3. AutoKeras(Auto Machine Learning library)
+4. Pandas(for data processing)
+5. SciKit Learn(for data preparation) 
+6. Matplotlib(for plotting graphs)
 
 Pycharm is the IDE used.  
 
