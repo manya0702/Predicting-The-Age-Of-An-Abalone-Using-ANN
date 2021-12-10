@@ -23,17 +23,19 @@ plt.show()
 from sklearn.ensemble import IsolationForest
 iso = IsolationForest(contamination=0.05) #proportion of outliers in the dataset range 0 to 0.5
 yhat = iso.fit_predict(X.iloc[:,1:])
-# select all rows that are not outliers
+
+# Select all rows that are not outliers
 mask = yhat != -1
 X_masked, y_masked = X[mask], y[mask]
 X, y = X_masked, y_masked
+
 # summarize the shape of the updated dataset
 print(X.shape, y.shape)
 # Verify outliers auto removed in dataset Num features
 plt.boxplot(X_masked.iloc[:,1:])
 plt.show()
 
-# split into train, eval and test sets
+# split into training, evaluation and test data sets
 from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X,y, test_size=0.1, random_state=42)
 X_train, X_val, y_train, y_val = train_test_split(X_train,y_train, test_size=0.2, random_state=42)
@@ -44,7 +46,7 @@ print(y_train.shape)
 print(y_val.shape)
 print(y_test.shape)
 
-# spit into num and cat features
+# split into numerical and categorical features
 X_train_num = X_train.iloc[:,1:]
 X_val_num = X_val.iloc[:,1:]
 X_test_num = X_test.iloc[:,1:]
@@ -52,16 +54,17 @@ X_train_cat = X_train.iloc[:,0]
 X_val_cat = X_val.iloc[:,0]
 X_test_cat = X_test.iloc[:,0]
 
-# Num Feature Selection : Pearson's Correation
+# Numerical Feature Selection : Pearson's Correation
 from sklearn.feature_selection import SelectKBest
 from sklearn.feature_selection import f_regression
 fs = SelectKBest(score_func=f_regression, k = 'all')
 fs.fit(X_train_num, y_train)
+
 # plot
 plt.bar([i for i in range(len(fs.scores_))], fs.scores_)
 plt.show()
 
-# Histgram to see distribution
+# Histogram to see distribution
 fig = X_train_num.hist(xlabelsize=2,ylabelsize=2 )
 plt.show()
 
@@ -123,7 +126,7 @@ model.save('abalone')
 from tensorflow.keras.models import load_model
 model = load_model('abalone')
 
-# Prepare Test Dataset
+# Preparing the Test Dataset
 X_test_num_engg = pol.transform(X_test_num)
 X_test_num_scaled = s1.transform(X_test_num_engg)
 X_test_num_trans = pca.transform(X_test_num_scaled)
@@ -142,6 +145,7 @@ y_pred = y_pred.flatten()
 print(y_pred.shape)
 print(y_pred)
 
+# Reporting the mean absolute error and mean sqaure error
 mae = np.mean(np.abs(y_pred-y_test))
 mse = np.mean(np.square(y_pred-y_test))
 print('Mean Absolute Error:%.2f, Mean Square Error:%.2f' %(mae,mse))
