@@ -20,7 +20,7 @@ A Data set having 4177 samples was downloaded from UCI online library. In the da
 •	Shell weight (grams) - After being dried 
 •	Rings (number) ±1.5 gives age in years
 
-**Machine Learning Libraries Used*
+**Machine Learning Libraries Used**
 
 Keras (higher level API for deep learning with Tensorflow in backend)
 Tensorflow (deep learning library in backend)
