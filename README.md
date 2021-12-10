@@ -1,4 +1,4 @@
-                                              PREDICTING AGE OF AN ABALONE FROM ITS PHYSICAL MEASUREMENTS USING A DEEP NEURAL NETWORK
+                                PREDICTING AGE OF AN ABALONE FROM ITS PHYSICAL MEASUREMENTS USING A DEEP NEURAL NETWORK
 
 Abalones are marine snails. There are between 30 to 130 types of abalones on earth. Abalones vary in sizes between 20 mm to 200mm. The shell of a greater part of their species 
 is raised, oval and may be angled or straightened. 
@@ -20,7 +20,7 @@ A Data set having 4177 samples was downloaded from UCI online library. In the da
 •	Shell weight (grams) - After being dried 
 •	Rings (number) ±1.5 gives age in years
 
-**Machine Learning Libraries Used **
+**Machine Learning Libraries Used*
 
 Keras (higher level API for deep learning with Tensorflow in backend)
 Tensorflow (deep learning library in backend)
