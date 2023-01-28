@@ -43,10 +43,10 @@ Pycharm is the IDE used.
 7. Feature selection, feature engineering, scaling and PCA (on numerical features to reduce noise)
 8. One Hot Encoding (categorical features)
 9. Concatenating numerical and categorical features
-10. Scaling the  targets
-11.Training the   model
-12.Prepare the test data set
-13.Evaluate the model on the test data
+10. Scaling the targets
+11. Training the model
+12. Prepare the test data set
+13. Evaluate the model on the test data
 
 
  **Result**
